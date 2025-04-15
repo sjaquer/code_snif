@@ -4,9 +4,16 @@ const submitButton = document.querySelector('#submit-btn');
 
 // Set valid PINs with their corresponding URLs
 const pinUrls = {
-    '1430': 'https://sjaquer.vercel.app/',
-    '0211': 'https://open.spotify.com/intl-es/',
-    '4321': 'https://campus.uwiener.edu.pe/?login_success=1'
+    '14020': 'https://maps.app.goo.gl/1Ws7H3KsHzFHm7eC8',
+    '02123': 'https://open.spotify.com/intl-es/',
+    '19987': 'https://campus.uwiener.edu.pe/?login_success=1',
+    '06110': 'https://sjaquesdasd/',
+    '50021': 'https://open.spotify.com/intl-es/',
+    '31415': 'https://campus.uwiener.edu.pe/?login_success=1',
+    '20204': 'https://sjaquer.vercel.asdasdapp/',
+    '09090': 'https://open.spotify.com/intl-es/',
+    '77701': 'https://campus.uwiener.edu.pe/?login_success=1',
+    '12345': 'https://campus.uwiener.edu.pe/?login_success=1'
 };
 
 // Initially disable the button
@@ -18,7 +25,7 @@ const errorSound = new Audio('https://www.soundjay.com/button/sounds/button-10.m
 // Add event listener for input changes
 pinInput.addEventListener('input', function() {
     // Enable button only if input length is 4 digits
-    if (this.value.length === 4) {
+    if (this.value.length === 5) {
         submitButton.disabled = false;
     } else {
         submitButton.disabled = true;
