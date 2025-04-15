@@ -199,3 +199,23 @@ h2 {
         padding: 0.7rem 1.2rem;
     }
 }
+
+@keyframes placeholderSpin {
+    0% { content: "12345"; }
+    10% { content: "56780"; }
+    20% { content: "90120"; }
+    30% { content: "34560"; }
+    40% { content: "78900"; }
+    50% { content: "23450"; }
+    60% { content: "67890"; }
+    70% { content: "0123"; }
+    80% { content: "45670"; }
+    90% { content: "89010"; }
+    100% { content: "00000"; }
+}
+
+.pin-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5rem;
+    transition: opacity 0.1s ease;
+}
