@@ -6,34 +6,59 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    color: #ffffff;
+}
+
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
-    background-size: 200% 200%;
-    animation: gradientBG 15s ease infinite;
+    background: #121212;
+    background: linear-gradient(
+        135deg,
+        #8B0000 25%,
+        #DC143C 25%,
+        #DC143C 50%,
+        #8B0000 50%,
+        #8B0000 75%,
+        #DC143C 75%,
+        #DC143C
+    );
+    background-size: 40px 40px;
+    animation: move 4s linear infinite;
     overflow: hidden;
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 .pin-container {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(100, 7, 7, 0.336);
     padding: 2rem 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.486);
     text-align: center;
     width: 90%;
     max-width: 350px;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: fadeIn 1s ease;
     backdrop-filter: blur(10px);
 }
 
 .pin-container::before {
-    content: '❤️';
+    content: '💗';
     position: absolute;
     top: -15px;
     left: 50%;
@@ -44,35 +69,39 @@ body {
 }
 
 h2 {
-    color: #e91e63;
-    margin-bottom: 1.2rem;
+    color: #f48fb1;
+    margin-bottom: 1.4rem;
     font-weight: 600;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .pin-input {
     font-size: 1.2rem;
     padding: 0.8rem;
     margin: 1rem 0;
-    border: 2px solid #ffcdd2;
+    border: 2px solid #e0e0e0;
     border-radius: 12px;
     width: 100%;
     text-align: center;
     outline: none;
     transition: all 0.3s ease;
     letter-spacing: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(51, 47, 47, 0.9);
+    color: #ffffff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .pin-input:focus {
-    border-color: #e91e63;
-    box-shadow: 0 0 20px rgba(233, 30, 99, 0.2);
+    border-color: #f48fb1;
+    box-shadow: 0 0 20px rgba(244, 143, 177, 0.2);
     transform: scale(1.02);
 }
 
 .submit-btn {
-    background: linear-gradient(45deg, #e91e63, #f06292);
+    background: linear-gradient(45deg, #f48fb1, #f06292);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -105,7 +134,7 @@ h2 {
 }
 
 .submit-btn:disabled {
-    background: #ffcdd2;
+    background: #2a2a2a;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
@@ -115,14 +144,23 @@ h2 {
     left: 100%;
 }
 
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translate(-50%, -40%);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -130,26 +168,6 @@ h2 {
     0% { transform: translateX(-50%) scale(1); }
     50% { transform: translateX(-50%) scale(1.1); }
     100% { transform: translateX(-50%) scale(1); }
-}
-
-@keyframes floatingHearts {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .floating-heart {
@@ -164,6 +182,7 @@ h2 {
 @media (max-width: 380px) {
     .pin-container {
         padding: 1.5rem 1rem;
+        width: 85%;
     }
     
     h2 {
