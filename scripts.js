@@ -5,10 +5,10 @@ const submitButton = document.querySelector('#submit-btn');
 // Set valid PINs with their corresponding URLs
 const pinUrls = {
     '16252': 'https://www.youtube.com/watch?v=ql9VWZ3KfQg',
-    '02123': 'https://open.spotify.com/intl-es/',
-    '19987': 'https://campus.uwiener.edu.pe/?login_success=1',
-    '06110': 'https://sjaquesdasd/',
-    '50021': 'https://open.spotify.com/intl-es/',
+    '02123': 'https://maps.app.goo.gl/semPDFJZtJReEVr68',
+    '19987': 'https://open.spotify.com/intl-es/track/5iOSiVYNpBGzuGKk6QA6D7?si=1eeeb058bcc04494',
+    '06110': 'https://maps.app.goo.gl/mMAHMmShsKUMLfjT8',
+    '50021': 'https://maps.app.goo.gl/4nMho3sSYhug8hpj9',
     '31415': 'https://campus.uwiener.edu.pe/?login_success=1',
     '20204': 'https://sjaquer.vercel.asdasdapp/',
     '09090': 'https://open.spotify.com/intl-es/',
