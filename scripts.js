@@ -4,7 +4,7 @@ const submitButton = document.querySelector('#submit-btn');
 
 // Set valid PINs with their corresponding URLs
 const pinUrls = {
-    '14020': 'https://maps.app.goo.gl/1Ws7H3KsHzFHm7eC8',
+    '16252': 'https://www.youtube.com/watch?v=ql9VWZ3KfQg',
     '02123': 'https://open.spotify.com/intl-es/',
     '19987': 'https://campus.uwiener.edu.pe/?login_success=1',
     '06110': 'https://sjaquesdasd/',
